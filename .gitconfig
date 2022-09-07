@@ -1,0 +1,16 @@
+[user]
+	email = a13323600@gmail.com
+	name = chomosuke
+[pull]
+	ff = only
+[alias]
+	unstage = reset HEAD --
+	ff = merge --ff-only
+	uncommit = reset HEAD~1
+	amend = commit --amend
+	no-ff = merge --no-ff
+	aliases = config --get-regexp '^alias\\.'
+	last = log -1 HEAD --stat
+[core]
+	editor = nvim
+	autocrlf = input
