@@ -4,13 +4,20 @@
 [pull]
 	ff = only
 [alias]
-	unstage = reset HEAD --
-	ff = merge --ff-only
-	uncommit = reset HEAD~1
-	amend = commit --amend
-	no-ff = merge --no-ff
+	adog = log --all --decorate --oneline --graph
 	aliases = config --get-regexp '^alias\\.'
+	amend = commit --amend
+	ff = merge --ff-only
+	graph = graph-specific --all
+	graph2 = graph2-specific --all
+	graph3 = graph3-specific --all
+	graph-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+	graph2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	graph3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
 	last = log -1 HEAD --stat
+	no-ff = merge --no-ff
+	uncommit = reset HEAD~1
+	unstage = reset HEAD --
 [core]
 	editor = nvim
 	autocrlf = input
