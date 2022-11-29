@@ -6,7 +6,8 @@
 [alias]
 	adog = log --all --decorate --oneline --graph
 	aliases = config --get-regexp '^alias\\.'
-	amend = commit --amend
+	amend = commit --amend --no-edit
+	amende = commit --amend
 	ff = merge --ff-only
 	graph = graph-specific --all
 	graph2 = graph2-specific --all
