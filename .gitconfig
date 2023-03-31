@@ -19,6 +19,8 @@
 	no-ff = merge --no-ff
 	uncommit = reset HEAD~1
 	unstage = reset HEAD --
+	clone-ssh = "!git -c core.sshCommand=\"ssh -i '$1' -o IdentitiesOnly=yes\" clone"
+	set-ssh = "!git config core.sshCommand \"ssh -i '$1' -o IdentitiesOnly=yes\""
 [core]
 	editor = nvim
 	autocrlf = input
